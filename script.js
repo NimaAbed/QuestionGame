@@ -119,3 +119,5 @@ function choiceHandler(evt){
         evt.target.classList.add("hidden")
     }
 }
+
+selectQuestion()
