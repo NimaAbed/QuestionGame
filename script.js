@@ -96,3 +96,26 @@ setInterval(function(){
     divTimer.innerHTML=timer
     // console.log(timer)
 },1000)
+function choiceHandler(evt){
+    if(timer==0){
+        return
+    }
+    if(evt.target.innerHTML==question.answer){
+        // console.log("good dame right")
+        h1.style.color="#80ed99"
+        // evt.target.style.backgroundColor="#38b000"
+        score++
+        divScore.innerHTML=score
+        divAnswer.forEach(item=>{
+            item.innerHTML=""
+            item.classList.remove("hidden")
+        })
+        selectQuestion()
+    }else{
+        // console.log("eshtebah")
+        timer--
+        divScore.innerHTML=score
+        h1.style.color="#d90429"
+        evt.target.classList.add("hidden")
+    }
+}
