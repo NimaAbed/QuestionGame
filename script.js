@@ -43,3 +43,15 @@ const questions=[{
     imAnswer:["مجید مجیدی","اصغر فرهادی","داریوش مهرجویی"],
     answer:"ابراهیم حاتمی کیا"
 }]
+const divQuestion=document.querySelector(".question")
+const divAnswer=document.querySelectorAll(".answer")
+const divScore=document.querySelector(".score span")
+const divTimer = document.querySelector(".timer span")
+const h1=document.querySelector(".h1")
+let question = ""
+let i = 0
+let timer=120
+let score=0
+let numberQuestion=""
+divTimer.innerHTML=timer
+divScore.innerHTML=score
