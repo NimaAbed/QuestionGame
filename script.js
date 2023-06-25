@@ -55,3 +55,36 @@ let score=0
 let numberQuestion=""
 divTimer.innerHTML=timer
 divScore.innerHTML=score
+
+function selectQuestion(){
+    
+    if(timer==0){
+        return
+    }
+    i=0
+    numberQuestion=Math.floor(Math.random()*questions.length)
+    if(question!=questions[numberQuestion]){
+        question= questions[numberQuestion]
+    }else{
+        question=questions[Math.floor(Math.random()*questions.length)]
+    }
+    document.querySelector(".answer-col").addEventListener("click",choiceHandler)
+    if(question.question.length>=40){
+        divQuestion.style.fontSize="25px"
+    }else if(question.question.length>=30){
+        divQuestion.style.fontSize="30px"
+    }
+    divAnswer[Math.floor(Math.random()*divAnswer.length)].innerHTML=question.answer
+    divAnswer.forEach(item=>{
+        if(!(item.innerHTML==question.answer)){
+            item.innerHTML = question.imAnswer[i]
+            i++
+            // console.log(item)
+        }
+    })
+    
+    
+    // console.log(question.question.length)
+    divQuestion.innerHTML=question.question
+
+}
