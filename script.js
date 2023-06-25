@@ -88,3 +88,11 @@ function selectQuestion(){
     divQuestion.innerHTML=question.question
 
 }
+setInterval(function(){
+    if(timer==0){
+        return
+    }
+    timer--
+    divTimer.innerHTML=timer
+    // console.log(timer)
+},1000)
