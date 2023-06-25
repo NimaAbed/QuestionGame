@@ -1,0 +1,91 @@
+@import url('https://v1.fontapi.ir/css/Lalezar');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #ade8f4;
+}
+.container {
+    background-color: #03045e;
+    /* margin: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.textC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    margin-top: 30px;
+    font-size: 40px;
+    /* font-weight: bold; */
+    text-align: center;
+    color: white;
+    font-family: Lalezar, sans-serif;
+}
+
+.question {
+    background-color: #0096c7;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 100px;
+}
+
+.answer-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 50px;
+}
+
+.answer {
+    /* display: flex; */
+    width: 40%;
+    border-radius: 25px;
+    margin: 10px;
+    height: 100px;
+    background-color: #48cae4;
+    font-size: 29px;
+    opacity: 1;
+    box-shadow: 0px 0px 70px 14px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    transition: opacity 0.5s ease-out;
+}
+.answer:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 70px 14px rgba(0,0,0,0.5);
+}
+.timer{
+    background-color: #2c7da0;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    top: 75px;
+    left: 34px;
+}
+.score{
+    background-color: #2c7da0;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    top: 75px;
+    left: 45px;
+}
+
+.answer.hidden {
+    opacity: 0;
+}
